@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/navbar/Navbar';
+import NumberToWords from './components/number-to-words/NumberToWords';
+import Photos from './components/pagination/Photos';
+import { Routes, Route } from "react-router-dom";
+import ColorPicker from './components/color-picker/ColorPicker';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+                <Navbar/>
+            <Routes>
+                <Route path="/" element={<ColorPicker/>} />
+                <Route path="/photos" element={<Photos/>} />
+                <Route path="/number" element={<NumberToWords/>} />
+            </Routes>
+            
+        </div>
+    );
 }
 
 export default App;

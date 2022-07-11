@@ -1,0 +1,113 @@
+.pagination-container {
+    padding: 20px 0;
+    max-width: 940px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.pagination-container.width-list {
+    max-width: 320px;
+}
+
+.photo-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
+    margin: 20px auto;
+}
+
+.pagination > ul {
+    display: flex;
+    width: 250px;
+    justify-content: space-evenly;
+    padding: 10px;
+    list-style: none;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+ul > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.8rem;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+li > a {
+    cursor: pointer;
+}
+
+li.selected {
+    background-color: #52616B;
+    color: #fff;
+}
+
+li.disabled {
+    opacity: 0.2;
+    cursor: default;
+}
+
+.loading {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+
+/* CSS */
+.view-type-btn {
+    background-color: #F0F5F9;
+    border: 2px solid #52616B;
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #1E2022;
+    font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    padding: .75rem 1rem;
+    text-align: center;
+    text-decoration: none #D1D5DB solid;
+    text-decoration-thickness: auto;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 80px;
+    align-self: flex-end;
+    margin: 0 10px;
+}
+
+.view-type-btn.btn-list {
+    margin: 0;
+}
+
+.view-type-btn:hover {
+  background-color: rgb(249,250,251);
+}
+
+.view-type-btn:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.view-type-btn:focus-visible {
+  box-shadow: none;
+}
+
+@media screen and (max-width: 768px) {
+    .photo-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .view-type-btn {
+        align-self: center;
+    }
+}

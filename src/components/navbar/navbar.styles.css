@@ -1,0 +1,21 @@
+nav {
+    height: 50px;
+    background-color: #C9D6DF;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+.nav-items {
+    width: 85%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.nav-items > a {
+    padding: 0 15px;
+    color: #1E2022;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+}

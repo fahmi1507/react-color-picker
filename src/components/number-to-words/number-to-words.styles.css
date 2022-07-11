@@ -1,0 +1,40 @@
+.number-2-words-container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 960px;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 200px;
+}
+
+.number-2-words-container > input {
+    height: 35px;
+    font-size: 16px;
+    margin: 10px 0;
+    border-radius: 4px;
+    padding: 0 6px;
+    border: 1px solid #C9D6DF;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+}
+
+.words-container > span {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.words-container {
+    padding: 10px;
+    border: 2px solid #C9D6DF;
+    border-radius: 6px;
+    min-width: 250px;
+    max-width: 400px;
+}
+
+@media screen and (max-width: 500px) {
+    .number-2-words-container {
+        flex-direction: column;
+    }
+
+}
