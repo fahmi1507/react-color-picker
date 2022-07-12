@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { generateColor } from '../../helper/generateColor'
+import Square from '../square/Square'
 import './color-picker.styles.css'
 
 
@@ -22,29 +23,22 @@ const ColorPicker = () => {
         <div >
             <div className="color-container">
             {
-                arrayOfColor.length !== 0 && arrayOfColor.map((e, idx) => {
+                arrayOfColor.length !== 0 && arrayOfColor.map((item, idx) => {
                     return (
                                 <div className='big-square' key={idx}>
                                 {
-                                    e.map(e => {
-                                        const { id, color } = e;
-                                        return (<div>
-                                            {
-                                                selectedColor.id === id && (
-                                                    <div className='hex-code'>
-                                                        RGB{selectedColor.color}
-                                                    </div>
-                                                )
-                                            }
-                                            <div
-                                                onClick={() => handleClick(color, id)}
-                                                key={e.id}
-                                                className={`rectangle ${selectedColor.id === id ? 'active' : ''}`}
-                                                style={{ backgroundColor: `rgba${color}`}}>
-                                            </div>
-
-                                        </div>
+                                    item.map(square => {
+                                        const { id, color } = square;
+                                        return (
+                                            <Square
+                                                selectedColor={selectedColor}
+                                                id={id}
+                                                color={color}
+                                                handleClick={handleClick}
+                                                key={id}
+                                            />
                                         )
+                                        
                                     })
                                 }
                                 </div>
